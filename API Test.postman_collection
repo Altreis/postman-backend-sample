@@ -1,0 +1,43 @@
+{
+	"info": {
+		"_postman_id": "5e5d7467-47d3-406d-a06f-8e48c6307461",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18862176"
+	},
+	"item": [
+		{
+			"name": "Check phone number",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check phone number\", function(){\r",
+							"    pm.expect(pm.response.text()).to.include(\"tel:\" + pm.environment.get(\"phoneNumber\"));\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.grupoinfomed.es/",
+					"protocol": "https",
+					"host": [
+						"www",
+						"grupoinfomed",
+						"es"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
