@@ -25,19 +25,40 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://www.grupoinfomed.es/",
-					"protocol": "https",
+					"raw": "{{url}}",
 					"host": [
-						"www",
-						"grupoinfomed",
-						"es"
-					],
-					"path": [
-						""
+						"{{url}}"
 					]
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://www.grupoinfomed.es/",
+			"type": "string"
 		}
 	]
 }
